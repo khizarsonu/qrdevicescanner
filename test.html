@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="qrscan.js"></script>
+    </head>
+    <body>
+        <input id=qr /> <br/><br/>
+        <p id=out></p>
+        <script type="text/javascript">
+            document.addEventListener("qrscan",function(e){
+                document.getElementById("qr").select();
+                document.getElementById("out").innerHTML=e.detail;                
+            });
+        </script>
+    </body>
+</html>
